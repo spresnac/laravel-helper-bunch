@@ -1,0 +1,33 @@
+{
+    "name": "spresnac/laravel-helper-bunch",
+    "license": "MIT",
+    "description": "Some usefull helper for laravel",
+    "keywords": ["php", "laravel"],
+    "type": "library",
+    "require": {
+      "php": ">=7.2.0",
+      "illuminate/support": "5.*",
+      "illuminate/console": "5.*",
+      "illuminate/pagination": "5.*"
+    },
+    "require-dev": {
+      "phpunit/phpunit": "7.*"
+  },
+    "autoload": {
+      "psr-4": {
+        "spresnac\\": "src/spresnac/"
+      }
+    },
+    "minimum-stability": "stable",
+    "authors": [
+      {
+        "name": "Sascha Presnac",
+        "email": "presnac@gmail.com"
+      }
+    ],
+    "homepage": "https://github.com/spresnac/laravel-helper-bunch",
+    "support": {
+      "issues": "https://github.com/spresnac/laravel-helper-bunch/issues",
+      "source": "https://github.com/spresnac/laravel-helper-bunch"
+    }
+}
