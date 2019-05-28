@@ -4,3 +4,10 @@ php:
   - '7.3'
   - hhvm # on Trusty only
   - nightly
+
+before_script:
+  - travis_retry composer self-update
+  - travis_retry composer install --no-interaction
+
+script:
+  - composer test-ci
