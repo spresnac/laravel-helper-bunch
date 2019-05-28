@@ -15,7 +15,12 @@
   },
     "autoload": {
       "psr-4": {
-        "spresnac\\": "src/spresnac/"
+        "spresnac\\Helper\\": "src/spresnac/Helper/"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "spresnac\\Helper\\tests\\": "tests/Helper/"
       }
     },
     "minimum-stability": "stable",
@@ -29,5 +34,8 @@
     "support": {
       "issues": "https://github.com/spresnac/laravel-helper-bunch/issues",
       "source": "https://github.com/spresnac/laravel-helper-bunch"
+    },
+    "scripts": {
+      "test-ci": "phpunit --coverage-clover=coverage.xml"
     }
 }

@@ -27,3 +27,4 @@ Homestead.json
 
 # composer
 composer.lock
+build/logs/*
