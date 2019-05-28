@@ -8,7 +8,7 @@ use Exception;
 /**
  * Class DatesHelper
  *
- * @package App\Helper
+ * @package spresnac\Helper
  */
 class DatesHelper
 {

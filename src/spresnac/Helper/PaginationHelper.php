@@ -8,7 +8,7 @@ use Illuminate\Support\Collection;
 /**
  * Class PaginationHelper
  *
- * @package App\Helper
+ * @package spresnac\Helper
  */
 class PaginationHelper
 {
