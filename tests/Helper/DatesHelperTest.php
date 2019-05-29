@@ -3,6 +3,7 @@
 namespace spresnac\Helper\tests;
 
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 use PHPUnit\Framework\TestCase;
 use spresnac\Helper\DatesHelper;
 
@@ -55,6 +56,6 @@ class DatesHelperTest extends TestCase
     {
         $date = '27.10.2017';
         $result = DatesHelper::format($date);
-        $this->assertEquals($result, '2017-10-27T00:00:00+00:00');
+        $this->assertTrue(Str::contains($result, '2017-10-27T00:00:00'));
     }
 }
