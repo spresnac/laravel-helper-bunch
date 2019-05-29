@@ -28,3 +28,4 @@ Homestead.json
 # composer
 composer.lock
 build/logs/*
+coverage.xml
