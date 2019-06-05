@@ -1,19 +1,18 @@
 <?php
+
 namespace spresnac\Helper;
 
-use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Collection;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 /**
- * Class PaginationHelper
- *
- * @package spresnac\Helper
+ * Class PaginationHelper.
  */
 class PaginationHelper
 {
     /**
-     * Generate a laravel default pagination with a collection only
+     * Generate a laravel default pagination with a collection only.
      *
      * @param Collection $items The collection to be displayed as paginated object
      * @param int $perPage Ammount of items per site
@@ -28,8 +27,9 @@ class PaginationHelper
         $items = $items instanceof Collection ? $items : Collection::make($items);
         $lap = new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
         $lap->withPath($path);
+
         return [
-            'data' => $lap ->values(),
+            'data' => $lap->values(),
             'links' => [
                 'first' => $lap->url(1),
                 'last' => $lap->url($lap->lastPage()),

@@ -2,19 +2,16 @@
 
 namespace spresnac\Helper;
 
-use Carbon\Carbon;
 use Exception;
+use Carbon\Carbon;
 
 /**
- * Class DatesHelper
- *
- * @package spresnac\Helper
+ * Class DatesHelper.
  */
 class DatesHelper
 {
-
     /**
-     * Return a normalized date string (current=W3C String Format)
+     * Return a normalized date string (current=W3C String Format).
      *
      * @param $input Carbon|null
      * @return string either w3c-formatted string or empty string
@@ -26,10 +23,12 @@ class DatesHelper
         } elseif (is_string($input) === true && $input !== '') {
             try {
                 $_tmp = new Carbon($input);
+
                 return $_tmp->toW3cString();
             } catch (Exception $e) {
             }
         }
+
         return '';
     }
 }
