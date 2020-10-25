@@ -1,26 +1,37 @@
 {
     "name": "spresnac/laravel-helper-bunch",
     "license": "MIT",
-    "description": "Some usefull helper for laravel",
+    "description": "Some useful helper for laravel",
     "keywords": ["php", "laravel"],
     "type": "library",
     "require": {
-      "php": ">=7.2.0",
-      "illuminate/support": "5.*|^6.0",
-      "illuminate/console": "5.*|^6.0",
-      "illuminate/pagination": "5.*|^6.0"
+      "php": "^7.2",
+      "illuminate/support": "5.*|^6.0|7.*|8.*",
+      "illuminate/console": "5.*|^6.0|7.*|8.*",
+      "illuminate/pagination": "5.*|^6.0|7.*|8.*"
     },
     "require-dev": {
-      "phpunit/phpunit": "7.*|^8.0"
-  },
+      "orchestra/testbench": "4.* || 5.* || 6.*",
+      "laravel/framework": "6.*||7.*||8.*"
+    },
+    "funding": [
+      {
+        "type": "other",
+        "url": "https://www.buymeacoffee.com/spresnac"
+      },
+      {
+        "type": "paypal",
+        "url": "https://www.paypal.me/paladin"
+      }
+    ],
     "autoload": {
       "psr-4": {
-        "spresnac\\Helper\\": "src/spresnac/Helper/"
+        "spresnac\\": "src/spresnac/"
       }
     },
     "autoload-dev": {
       "psr-4": {
-        "spresnac\\Helper\\tests\\": "tests/Helper/"
+        "spresnac\\Helper\\tests\\": "tests/spresnac/"
       }
     },
     "minimum-stability": "stable",
@@ -34,6 +45,13 @@
     "support": {
       "issues": "https://github.com/spresnac/laravel-helper-bunch/issues",
       "source": "https://github.com/spresnac/laravel-helper-bunch"
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "spresnac\\Helper\\HelperBunchCommandServiceProvider"
+        ]
+      }
     },
     "scripts": {
       "test-ci": "phpunit --coverage-clover=coverage.xml"

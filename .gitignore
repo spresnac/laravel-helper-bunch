@@ -29,3 +29,4 @@ Homestead.json
 composer.lock
 build/logs/*
 coverage.xml
+.phpunit.result.cache
