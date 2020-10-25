@@ -2,9 +2,9 @@
 
 namespace spresnac\Helper;
 
-use Illuminate\Support\Collection;
-use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
 
 /**
  * Class PaginationHelper.
@@ -21,7 +21,7 @@ class PaginationHelper
      * @param string $path Absolute URI to be used in the "links" section
      * @return array
      */
-    public static function paginate_collection($items, $perPage = 15, $page = null, $options = [], $path = '') : array
+    public static function paginate_collection($items, $perPage = 15, $page = null, $options = [], $path = ''): array
     {
         $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
         $items = $items instanceof Collection ? $items : Collection::make($items);

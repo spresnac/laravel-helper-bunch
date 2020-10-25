@@ -4,9 +4,9 @@ namespace App\Helper;
 
 use App\User;
 use Carbon\Carbon;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 /**
  * Class PasswordResetHelper.
@@ -20,7 +20,7 @@ class PasswordResetHelper
      * @param int $token_lenght
      * @return string
      */
-    public static function getNewResetTokenByUser(User $user, int $token_lenght = 255) : string
+    public static function getNewResetTokenByUser(User $user, int $token_lenght = 255): string
     {
         $token = Str::random($token_lenght);
         DB::table('password_resets')
@@ -44,7 +44,7 @@ class PasswordResetHelper
      * @return string
      * @see PasswordResetHelper::getNewResetTokenByUser()
      */
-    public static function getNewResetTokenByUserId(int $user_id, int $token_lenght = 255) : string
+    public static function getNewResetTokenByUserId(int $user_id, int $token_lenght = 255): string
     {
         $user = User::findOrFail($user_id);
 
