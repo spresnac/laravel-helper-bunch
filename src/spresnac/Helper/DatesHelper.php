@@ -2,8 +2,8 @@
 
 namespace spresnac\Helper;
 
-use Exception;
 use Carbon\Carbon;
+use Exception;
 
 /**
  * Class DatesHelper.
@@ -16,7 +16,7 @@ class DatesHelper
      * @param $input Carbon|null
      * @return string either w3c-formatted string or empty string
      */
-    public static function format($input) : string
+    public static function format($input): string
     {
         if ($input instanceof Carbon) {
             return $input->toW3cString();
