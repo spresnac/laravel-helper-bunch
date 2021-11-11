@@ -16,8 +16,8 @@ class PasswordResetHelper
     /**
      * Returns a new password reset token for the given user and makes this new token the only valid one.
      *
-     * @param User $user
-     * @param int $token_lenght
+     * @param  User  $user
+     * @param  int  $token_lenght
      * @return string
      */
     public static function getNewResetTokenByUser(User $user, int $token_lenght = 255): string
@@ -39,9 +39,10 @@ class PasswordResetHelper
     /**
      * Same as PasswordResetHelper::getNewResetTokenByUser() but with an id instead of the user object.
      *
-     * @param int $user_id
-     * @param int $token_lenght
+     * @param  int  $user_id
+     * @param  int  $token_lenght
      * @return string
+     *
      * @see PasswordResetHelper::getNewResetTokenByUser()
      */
     public static function getNewResetTokenByUserId(int $user_id, int $token_lenght = 255): string
