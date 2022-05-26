@@ -14,11 +14,11 @@ class PaginationHelper
     /**
      * Generate a laravel default pagination with a collection only.
      *
-     * @param Collection $items The collection to be displayed as paginated object
-     * @param int $perPage Ammount of items per site
-     * @param null $page The actual site to be displayed
-     * @param array $options Some LengthAwarePaginator options
-     * @param string $path Absolute URI to be used in the "links" section
+     * @param  Collection  $items  The collection to be displayed as paginated object
+     * @param  int  $perPage  Ammount of items per site
+     * @param  null  $page  The actual site to be displayed
+     * @param  array  $options  Some LengthAwarePaginator options
+     * @param  string  $path  Absolute URI to be used in the "links" section
      * @return array
      */
     public static function paginate_collection($items, $perPage = 15, $page = null, $options = [], $path = ''): array
